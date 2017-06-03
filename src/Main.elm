@@ -6,7 +6,7 @@ import Navigation
 import Json.Encode exposing (Value)
 
 
-port urlsChange : String -> Cmd msg
+port urlChange : String -> Cmd msg
 
 
 type alias Model =
