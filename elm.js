@@ -13108,10 +13108,10 @@ var _elm_lang$navigation$Navigation$onEffects = F4(
 	});
 _elm_lang$core$Native_Platform.effectManagers['Navigation'] = {pkg: 'elm-lang/navigation', init: _elm_lang$navigation$Navigation$init, onEffects: _elm_lang$navigation$Navigation$onEffects, onSelfMsg: _elm_lang$navigation$Navigation$onSelfMsg, tag: 'fx', cmdMap: _elm_lang$navigation$Navigation$cmdMap, subMap: _elm_lang$navigation$Navigation$subMap};
 
-var _user$project$Main$subscriptions = function (model) {
+var _lucamug$elm_carousel$Main$subscriptions = function (model) {
 	return _elm_lang$core$Platform_Sub$none;
 };
-var _user$project$Main$viewLocation = function (location) {
+var _lucamug$elm_carousel$Main$viewLocation = function (location) {
 	return A2(
 		_elm_lang$html$Html$li,
 		{ctor: '[]'},
@@ -13122,7 +13122,7 @@ var _user$project$Main$viewLocation = function (location) {
 			_1: {ctor: '[]'}
 		});
 };
-var _user$project$Main$viewLink = function (name) {
+var _lucamug$elm_carousel$Main$viewLink = function (name) {
 	return A2(
 		_elm_lang$html$Html$li,
 		{
@@ -13166,7 +13166,7 @@ var _user$project$Main$viewLink = function (name) {
 			_1: {ctor: '[]'}
 		});
 };
-var _user$project$Main$currentHash = function (currentPage) {
+var _lucamug$elm_carousel$Main$currentHash = function (currentPage) {
 	var _p0 = currentPage;
 	if (_p0.ctor === 'Just') {
 		return _p0._0.hash;
@@ -13174,8 +13174,8 @@ var _user$project$Main$currentHash = function (currentPage) {
 		return '';
 	}
 };
-var _user$project$Main$view = function (model) {
-	var currenthash = _user$project$Main$currentHash(
+var _lucamug$elm_carousel$Main$view = function (model) {
+	var currenthash = _lucamug$elm_carousel$Main$currentHash(
 		_elm_lang$core$List$head(model.history));
 	return A2(
 		_elm_lang$html$Html$div,
@@ -13231,7 +13231,7 @@ var _user$project$Main$view = function (model) {
 								{ctor: '[]'},
 								A2(
 									_elm_lang$core$List$map,
-									_user$project$Main$viewLink,
+									_lucamug$elm_carousel$Main$viewLink,
 									{
 										ctor: '::',
 										_0: 'top',
@@ -13364,18 +13364,21 @@ var _user$project$Main$view = function (model) {
 			}
 		});
 };
-var _user$project$Main$initialModel = {
-	history: {ctor: '[]'}
+var _lucamug$elm_carousel$Main$init = function (location) {
+	return {
+		ctor: '_Tuple2',
+		_0: {
+			history: {ctor: '[]'}
+		},
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
 };
-var _user$project$Main$init = function (location) {
-	return {ctor: '_Tuple2', _0: _user$project$Main$initialModel, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$urlChange = _elm_lang$core$Native_Platform.outgoingPort(
+var _lucamug$elm_carousel$Main$urlChange = _elm_lang$core$Native_Platform.outgoingPort(
 	'urlChange',
 	function (v) {
 		return v;
 	});
-var _user$project$Main$update = F2(
+var _lucamug$elm_carousel$Main$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
 		var _p2 = _p1._0;
@@ -13389,26 +13392,26 @@ var _user$project$Main$update = F2(
 			_1: _elm_lang$core$Platform_Cmd$batch(
 				{
 					ctor: '::',
-					_0: _user$project$Main$urlChange(_p2.hash),
+					_0: _lucamug$elm_carousel$Main$urlChange(_p2.hash),
 					_1: {ctor: '[]'}
 				})
 		};
 	});
-var _user$project$Main$Model = function (a) {
+var _lucamug$elm_carousel$Main$Model = function (a) {
 	return {history: a};
 };
-var _user$project$Main$UrlChange = function (a) {
+var _lucamug$elm_carousel$Main$UrlChange = function (a) {
 	return {ctor: 'UrlChange', _0: a};
 };
-var _user$project$Main$main = A2(
+var _lucamug$elm_carousel$Main$main = A2(
 	_elm_lang$navigation$Navigation$program,
-	_user$project$Main$UrlChange,
-	{init: _user$project$Main$init, view: _user$project$Main$view, update: _user$project$Main$update, subscriptions: _user$project$Main$subscriptions})();
+	_lucamug$elm_carousel$Main$UrlChange,
+	{init: _lucamug$elm_carousel$Main$init, view: _lucamug$elm_carousel$Main$view, update: _lucamug$elm_carousel$Main$update, subscriptions: _lucamug$elm_carousel$Main$subscriptions})();
 
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
-if (typeof _user$project$Main$main !== 'undefined') {
-    _user$project$Main$main(Elm['Main'], 'Main', {"types":{"unions":{"Main.Msg":{"args":[],"tags":{"UrlChange":["Navigation.Location"]}}},"aliases":{"Navigation.Location":{"args":[],"type":"{ href : String , host : String , hostname : String , protocol : String , origin : String , port_ : String , pathname : String , search : String , hash : String , username : String , password : String }"}},"message":"Main.Msg"},"versions":{"elm":"0.18.0"}});
+if (typeof _lucamug$elm_carousel$Main$main !== 'undefined') {
+    _lucamug$elm_carousel$Main$main(Elm['Main'], 'Main', {"types":{"unions":{"Main.Msg":{"args":[],"tags":{"UrlChange":["Navigation.Location"]}}},"aliases":{"Navigation.Location":{"args":[],"type":"{ href : String , host : String , hostname : String , protocol : String , origin : String , port_ : String , pathname : String , search : String , hash : String , username : String , password : String }"}},"message":"Main.Msg"},"versions":{"elm":"0.18.0"}});
 }
 
 if (typeof define === "function" && define['amd'])

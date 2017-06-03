@@ -6,12 +6,7 @@ import Navigation
 import Json.Encode exposing (Value)
 
 
-port urlChange : String -> Cmd msg
-
-
-initialModel =
-    { history = []
-    }
+port urlsChange : String -> Cmd msg
 
 
 type alias Model =
@@ -25,9 +20,8 @@ type Msg
 
 init : Navigation.Location -> ( Model, Cmd Msg )
 init location =
-    ( initialModel
+    ( { history = [] }
     , Cmd.none
-      -- , InitialCmd.initialCmd
     )
 
 
@@ -97,6 +91,7 @@ view model =
             ]
 
 
+currentHash : Maybe Navigation.Location -> String
 currentHash currentPage =
     case currentPage of
         Just location ->
@@ -132,6 +127,7 @@ subscriptions model =
     Sub.none
 
 
+main : Program Never Model Msg
 main =
     Navigation.program UrlChange
         { init = init
