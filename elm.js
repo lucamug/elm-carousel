@@ -13389,12 +13389,7 @@ var _lucamug$elm_carousel$Main$update = F2(
 				{
 					history: {ctor: '::', _0: _p2, _1: model.history}
 				}),
-			_1: _elm_lang$core$Platform_Cmd$batch(
-				{
-					ctor: '::',
-					_0: _lucamug$elm_carousel$Main$urlChange(_p2.hash),
-					_1: {ctor: '[]'}
-				})
+			_1: _lucamug$elm_carousel$Main$urlChange(_p2.hash)
 		};
 	});
 var _lucamug$elm_carousel$Main$Model = function (a) {

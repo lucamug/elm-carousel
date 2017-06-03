@@ -30,9 +30,7 @@ update msg model =
     case msg of
         UrlChange location ->
             ( { model | history = location :: model.history }
-            , Cmd.batch
-                [ (urlChange location.hash)
-                ]
+            , (urlChange location.hash)
             )
 
 
