@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Rakuten</title>
+    <title>Elm Carousel</title>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -51,11 +51,7 @@
       if (page === "#carousel") {
         window.requestAnimationFrame(function () {
           var element = document.getElementsByClassName("carousel")[0];
-          if (element) {
-            var flkty = new Flickity(element, { "wrapAround": true });
-          } else {
-            console.log("Carousel not ready!");
-          }
+          var flkty = new Flickity(element, { "wrapAround": true });
         });
       }
     });

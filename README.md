@@ -1,4 +1,4 @@
-# ![Elm Carousel](.png)
+# Elm Carousel
 
 ### [Demo](https://lucamug.github.io/elm-carousel/)
 
