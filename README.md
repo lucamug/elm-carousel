@@ -1,6 +1,6 @@
 # ![Elm Carousel](.png)
 
-### [Demo](https://lucamug.github.io/elm-carousel)
+### [Demo](https://lucamug.github.io/elm-carousel/)
 
 # How it works
 
